@@ -1,36 +1,68 @@
-Portfolio Optimization & Investment Analytics System
 
-A Python-powered system for data-driven portfolio decision-making with automated analytics and Power BI integration.
 
-Overview
+# Portfolio Optimization & Investment Analytics System
 
-This project implements a Python-based portfolio optimization system that helps investors make smarter, data-driven decisions.
-It automates the analysis of asset performance, optimizes portfolio weights, and produces actionable insights for portfolio adjustment.
+This project implements a Python-based portfolio optimization system designed to support data-driven investment decisions. It automates financial analytics, computes optimal portfolio weights, evaluates risk–return metrics, and integrates seamlessly with Power BI for interactive visualization.
 
-The system integrates with Power BI to provide interactive dashboards for financial visualization and investment monitoring.
+---
 
-Key Features
+## Overview
 
-Portfolio Optimization using Markowitz Mean-Variance Model
+The system analyzes historical asset data, performs mean-variance optimization, generates efficient frontier plots, and produces actionable recommendations for portfolio adjustments.
+It is built for students, analysts, and anyone exploring quantitative finance.
 
-Automated Data Cleaning and Preprocessing
+---
 
-Risk Metrics: Volatility, Sharpe Ratio, Expected Returns
+## Key Features
 
-Efficient Frontier Generation
+* Portfolio optimization using the Markowitz mean-variance model
+* Automated data cleaning and preprocessing
+* Calculation of volatility, expected returns, Sharpe ratio
+* Efficient frontier visualization
+* Exportable results for Power BI dashboards
+* Lightweight modular design (loader, optimizer, metrics, visualizer)
+* CSV/Excel-based input and output structure
 
-Power BI Integration for Dynamic Visualization
+---
 
-Rebalancing Recommendations Based on Performance
+## Tech Stack
 
-CSV/Excel Input for Portfolio Assets
+* Python
+* Pandas, NumPy
+* Matplotlib
+* PyPortfolioOpt (optional)
+* Power BI
 
-Exportable Results for Reporting
+---
 
-Tech Stack
+## System Workflow
 
-Python
+1. Load historical price data from CSV.
+2. Clean, preprocess, and calculate daily returns.
+3. Generate covariance matrix and expected returns.
+4. Optimize portfolio weights under various constraints (max Sharpe, min variance).
+5. Plot the efficient frontier and save results.
+6. Export metrics and optimized weights for Power BI.
+7. Build dashboards for allocation, performance, and risk analysis.
 
-Pandas, NumPy
+---
 
-Matplotlib, Seaborn
+## Project Structure
+
+```
+project/
+│── data/
+│   └── portfolio_data.csv
+│── notebooks/
+│   └── optimization.ipynb
+│── src/
+│   ├── data_loader.py
+│   ├── optimizer.py
+│   ├── risk_metrics.py
+│   └── visualizer.py
+│── powerbi/
+│   └── portfolio_dashboard.pbix
+│── results/
+│   └── optimized_weights.csv
+```
+
